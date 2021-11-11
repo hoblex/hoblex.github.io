@@ -6,6 +6,22 @@
     --style-color-dark: #0a6ea6;
 }
 
+@font-face {
+    font-family: "PT Sans Narrow";
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/PTSansNarrow-Regular.woff2") format("woff2"),
+    url("fonts/PTSansNarrow-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/PTSans-Regular.woff2") format("woff2"),
+    url("fonts/PTSans-Regular.woff") format("woff");
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -17,4 +33,89 @@
     clip-path: inset(100%);
     clip: rect(0, 0, 0, 0);
     overflow: hidden;
+}
+
+.page-body {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    /*align-content: start;*/
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "PT Sans Narrow", sans-serif;
+}
+
+.page-header {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    padding: 0;
+    min-width: 320px;
+    width: 100%;
+    max-width: 1000px;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1000px) {
+    .page-header {
+        padding: 0 20px;
+    }
+}
+
+.page-header__logo-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 286px;
+    text-decoration: none;
+    font-size: 64px;
+    color: var(--basic-black);
+}
+
+.page-header__logo-img {
+    width: 48px;
+    height: 43px;
+    align-self: center;
+}
+
+.page-header__logo-link:hover,
+.page-header__logo-link:hover img {
+    color: var(--style-color-light);
+    fill: var(--style-color-light);
+}
+
+.page-header__nav-list {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-self: center;
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    text-underline-offset: -1px;
+    flex: none;
+}
+
+.page-header__nav-item:first-child {
+    margin-right: 19px;
+}
+
+.page-header__button {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--style-color);
+    width: 100px;
+    height: 32px;
+    color: var(--basic-white);
+    text-decoration: none;
+    font-family: "PT Sans", sans-serif;
+    border-radius: 4px;
+    box-sizing: border-box;
+    flex: none;
 }
