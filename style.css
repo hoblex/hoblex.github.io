@@ -164,6 +164,7 @@
 .page-main {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     padding: 0 20px;
     margin: 0 auto;
     width: 100%;
@@ -282,6 +283,7 @@
     height: 32px;
     box-sizing: border-box;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -289,6 +291,14 @@
 .form__label-name {
     margin: 0;
     min-width: 69px;
+}
+
+.form__control-container {
+    width: 100%;
+    max-width: 566px;
+    margin: 0;
+    padding: 0;
+    position: relative;
 }
 
 .form__control--text {
@@ -308,13 +318,9 @@
     color: var(--placeholder-color);
 }
 
-.form__label--text-email {
-    position: relative;
-}
-
 .form__comment {
     position: absolute;
-    left: 95px;
+    left: 0;
     top: 37px;
     color: var(--placeholder-color);
     font-size: 14px;
