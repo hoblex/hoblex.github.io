@@ -1,5 +1,6 @@
 :root {
     --basic-white: #ffffff;
+    --basic-white-60: rgba(255, 255, 255, 0.6);
     --basic-black: #000000;
     --style-color: #0078bb;
     --style-color-light: #62B9EA;
@@ -105,7 +106,7 @@
     font-family: "PT Sans", sans-serif;
     font-size: 16px;
     line-height: 20px;
-    text-underline-offset: -1px;
+    /*text-underline-offset: -1px;*/
     flex: none;
 }
 
@@ -113,11 +114,25 @@
     margin-right: 19px;
 }
 
+.page-header__nav-list a {
+    color: var(--style-color);
+}
+
+.page-header__nav-list a:hover {
+    text-decoration: none;
+    color: var(--style-color-light);
+}
+
+.page-header__nav-list a:active {
+    color: var(--style-color-dark);
+}
+
 .page-header__button {
     align-self: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0;
     background-color: var(--style-color);
     width: 100px;
     height: 32px;
@@ -127,4 +142,31 @@
     border-radius: 4px;
     box-sizing: border-box;
     flex: none;
+}
+
+.regular-button:hover {
+    background-color: var(--style-color-light);
+}
+
+.regular-button:active {
+    color: var(--basic-white-60);
+    background-color: var(--style-color-dark);
+    fill: var(--basic-white-60);
+}
+
+.page-main {
+    display: flex;
+    flex-direction: row;
+}
+
+.form__submit {
+    width: 160px;
+    height: 48px;
+    font-size: 20px;
+    background-color: var(--style-color);
+    font-family: "PT Sans", sans-serif;
+    border: none;
+    border-radius: 4px;
+    color: var(--basic-white);
+    fill: var(--basic-white);
 }
