@@ -78,13 +78,21 @@
     width: 48px;
     height: 43px;
     align-self: center;
+    fill: var(--basic-black)
 }
 
 .page-header__logo-link:hover,
-.page-header__logo-link:hover img {
+.page-header__logo-link:hover .page-header__logo-img {
     color: var(--style-color-light);
     fill: var(--style-color-light);
 }
+
+.page-header__logo-link:active,
+.page-header__logo-link:active .page-header__logo-img {
+    color: var(--style-color-dark);
+    fill: var(--style-color-dark);
+}
+
 
 .page-header__nav-list {
     display: flex;
