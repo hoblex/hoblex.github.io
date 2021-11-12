@@ -190,6 +190,7 @@
     color: var(--basic-white);
     fill: var(--basic-white);
     align-self: center;
+    cursor: pointer;
 }
 
 .cat-message {
@@ -233,7 +234,6 @@
     height: 160px;
     font-family: "PT Sans", sans-serif;
     font-size: 16px;
-
 }
 
 .form__label--checkbox {
@@ -261,6 +261,33 @@
     padding: 7px 0 0 11px;
     font-size: 16px;
     color: var(--placeholder-color);
+}
+
+.form__control--checkbox {
+    appearance: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    border: 1px solid var(--basic-black-15);
+    border-radius: 4px;
+}
+
+.form__control--checkbox::after {
+    display: none;
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 7px;
+    border-top: 2px solid var(--style-color);
+    border-right: 2px solid var(--style-color);
+    transform: translate(15%, 50%) rotate(135deg);
+}
+
+.form__control--checkbox:checked::after {
+    display: block;
 }
 
 .cat-photo__title {
