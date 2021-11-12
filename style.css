@@ -2,9 +2,11 @@
     --basic-white: #ffffff;
     --basic-white-60: rgba(255, 255, 255, 0.6);
     --basic-black: #000000;
+    --basic-black-15: rgba(0, 0, 0, 0.15);
     --style-color: #0078bb;
     --style-color-light: #62B9EA;
     --style-color-dark: #0a6ea6;
+    --placeholder-color: #808080;
 }
 
 @font-face {
@@ -42,13 +44,14 @@
     min-height: 100%;
     margin: 0;
     padding: 0;
-    font-family: "PT Sans Narrow", sans-serif;
+    font-family: "PT Sans", sans-serif;
     font-size: 16px;
 }
 
 .page-header {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin: 0 auto;
     min-width: 335px;
     width: 100%;
@@ -56,6 +59,7 @@
     padding: 0 20px;
     justify-content: space-between;
     box-sizing: border-box;
+    font-family: "PT Sans Narrow", sans-serif;
 }
 
 @media (max-width: 1000px) {
@@ -105,7 +109,6 @@
     align-self: center;
     font-family: "PT Sans", sans-serif;
     line-height: 20px;
-    /*text-underline-offset: -1px;*/
     flex: none;
 }
 
@@ -115,6 +118,7 @@
 
 .page-header__nav-list a {
     color: var(--style-color);
+    text-decoration-skip-ink: none;
 }
 
 .page-header__nav-list a:hover {
@@ -170,6 +174,11 @@
     }
 }
 
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
 .form__submit {
     width: 160px;
     height: 48px;
@@ -180,11 +189,12 @@
     border-radius: 4px;
     color: var(--basic-white);
     fill: var(--basic-white);
+    align-self: center;
 }
 
 .cat-message {
     max-width: 660px;
-    margin: 0;
+    margin: 0 40px 0 0;
     padding: 0;
 }
 
@@ -192,6 +202,7 @@
     font-size: 42px;
     font-weight: normal;
     margin: 0;
+    font-family: "PT Sans Narrow", sans-serif;
 }
 
 .cat-message__desc-text {
@@ -203,6 +214,11 @@
     border: none;
     padding: 0;
     margin: 0;
+    font-family: "PT Sans Narrow", sans-serif;
+}
+
+.form__label {
+    font-family: "PT Sans", sans-serif;
 }
 
 .form__legend {
@@ -216,6 +232,8 @@
     width: 100%;
     height: 160px;
     font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+
 }
 
 .form__label--checkbox {
@@ -223,5 +241,44 @@
 }
 
 .form__label--text {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form__control--text {
+    width: 100%;
+    max-width: 566px;
+    height: 32px;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid var(--basic-black-15);
+    border-radius: 4px;
+}
+
+.form__control--text::placeholder {
+    box-sizing: border-box;
+    padding: 7px 0 0 11px;
+    font-size: 16px;
+    color: var(--placeholder-color);
+}
+
+.cat-photo__title {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 28px;
+}
+
+.cat-photo__title {
+    margin: 0;
+}
+
+.cat-photo__gallery {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cat-photo__item {
+    width: 300px;
+    height: 100%;
 }
