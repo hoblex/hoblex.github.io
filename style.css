@@ -66,6 +66,7 @@
     .page-header {
         margin: 34px 0 60px 0;
         max-width: none;
+        flex-direction: column;
     }
 }
 
@@ -202,6 +203,11 @@
     cursor: pointer;
 }
 
+@media (max-width: 375px) {
+    .form__submit {
+        width: 100%;
+    }
+}
 .cat-message {
     max-width: 660px;
     margin: 0 40px 0 0;
@@ -217,7 +223,7 @@
 }
 
 .cat-message__desc-header {
-    min-width: 354px;
+    min-width: 335px;
     font-size: 42px;
     font-weight: normal;
     margin: 0 0 10px 0;
@@ -227,6 +233,12 @@
 .cat-message__desc-text {
     margin: 0;
     font-family: "PT Sans", sans-serif;
+}
+
+@media (max-width: 375px) {
+    .cat-message__desc-text {
+        width: 316px;
+    }
 }
 
 .form__fieldset {
@@ -360,6 +372,22 @@
 .cat-photo {
     box-sizing: border-box;
     padding-top: 11px;
+    min-width: 335px;
+}
+
+@media (max-width: 375px) {
+    .cat-photo {
+        width: 335px;
+    }
+
+    .cat-photo__item {
+        width: 335px;
+        margin-right: 0;
+    }
+
+    .cat-photo__image {
+        width: 335px;
+    }
 }
 
 .cat-photo__title {
