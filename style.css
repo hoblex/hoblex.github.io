@@ -383,10 +383,15 @@
 }
 
 .form__control--text-email::placeholder {
+    width: 100%;
     box-sizing: border-box;
     padding: 10px 0 0 10px;
     font-size: 16px;
     color: var(--placeholder-color);
+}
+
+.form__control--text-email::-moz-placeholder {
+    opacity: 1;
 }
 
 .form__comment {
