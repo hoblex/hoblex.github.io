@@ -208,7 +208,7 @@
 
 .form__submit {
     padding: 0;
-    margin-left: calc(100% );
+    margin-left: calc(100% - 10px);
     margin-right: calc(100% + 10px);
     width: 160px;
     height: 48px;
